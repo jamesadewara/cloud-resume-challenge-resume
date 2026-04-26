@@ -1,0 +1,83 @@
+name: Deploy Website to S3
+
+on:
+  push:
+    branches: [main, staging]
+    paths:
+      - "index.html"
+      - "styles.css"
+      - "main.js"
+      - "assets/**"
+      - ".github/workflows/deploy.yml"
+  pull_request:
+    branches: [main, staging]
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  AWS_REGION: us-east-1
+  S3_BUCKET: resume.jamesadewara.com
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Check required files
+        run: |
+          test -f index.html && echo "index.html found" || (echo "index.html missing" && exit 1)
+          test -f styles.css && echo "styles.css found" || (echo "styles.css missing" && exit 1)
+          test -f main.js && echo "main.js found" || (echo "main.js missing" && exit 1)
+
+      - name: Check API URL is production
+        run: |
+          if grep -q "localhost" main.js; then
+            echo "WARNING: main.js contains localhost API URL"
+            echo "Update API_BASE_URL to production before deploying"
+            exit 1
+          fi
+
+  deploy:
+    name: Deploy to S3
+    runs-on: ubuntu-latest
+    needs: validate
+    environment: production
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Configure AWS credentials (OIDC)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+          role-duration-seconds: 900
+
+      - name: Sync to S3
+        run: |
+          aws s3 sync . s3://${{ env.S3_BUCKET }} \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "*.md" \
+            --exclude "terraform/*" \
+            --cache-control "max-age=3600"
+
+      - name: Set content types
+        run: |
+          aws s3 cp s3://${{ env.S3_BUCKET }}/index.html s3://${{ env.S3_BUCKET }}/index.html \
+            --metadata-directive REPLACE --content-type "text/html"
+          aws s3 cp s3://${{ env.S3_BUCKET }}/styles.css s3://${{ env.S3_BUCKET }}/styles.css \
+            --metadata-directive REPLACE --content-type "text/css"
+          aws s3 cp s3://${{ env.S3_BUCKET }}/main.js s3://${{ env.S3_BUCKET }}/main.js \
+            --metadata-directive REPLACE --content-type "application/javascript"
+
+      - name: Verify deployment
+        run: |
+          echo "Website deployed to: https://${{ env.S3_BUCKET }}"

@@ -474,16 +474,57 @@
   <!-- Visitor Counter Section -->
   <section class="section">
     <div class="visitor-section fade-in">
-      <div class="visitor-icon">👁️</div>
-      <h3 class="visitor-title">Live Visitor Counter</h3>
-      <p class="visitor-desc">Powered by FastAPI + Beanie + MongoDB — every visit tracked in real-time.</p>
-      <div id="visitorDisplay">
-        <div class="visitor-loading">
-          <div class="spinner"></div>
-          <span>Connecting to database...</span>
+      <div class="visitor-glass-card">
+        <div class="visitor-header">
+          <div class="visitor-icon-container">
+            <div class="pulse-ring"></div>
+            <span class="visitor-icon">👁️</span>
+          </div>
+          <div class="visitor-meta">
+            <h3 class="visitor-title">Live Analytics</h3>
+            <p class="visitor-desc">Real-time visitor tracking via FastAPI & MongoDB</p>
+          </div>
+        </div>
+        
+        <div class="visitor-stats">
+          <div id="visitorDisplay">
+            <div class="visitor-loading">
+              <div class="spinner"></div>
+              <span>Connecting...</span>
+            </div>
+          </div>
+          <p class="visitor-label">Total Unique Visitors</p>
+        </div>
+
+        <div class="visitor-details-container">
+          <button id="toggleDetails" class="btn-text">
+            <span>Show Recent Visitors</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          
+          <div id="visitorList" class="visitor-list hidden">
+            <div class="visitor-list-header">
+              <span>Recent Activity</span>
+              <span id="totalLogs" class="text-xs opacity-60">0 logs</span>
+            </div>
+            <div class="visitor-table-wrapper">
+              <table class="visitor-table">
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>IP Address</th>
+                    <th>Page</th>
+                    <th>Referrer</th>
+                  </tr>
+                </thead>
+                <tbody id="visitorTableBody">
+                  <!-- Injected via JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
-      <p class="visitor-label">Total unique visitors</p>
     </div>
   </section>
 
