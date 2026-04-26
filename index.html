@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Adewara — Cloud Engineer & Fullstack Developer</title>
+  <meta name="description" content="James Adewara - Cloud Engineering Intern & Fullstack Developer. AWS, Ansible, Linux, React, Next.js, TypeScript, FastAPI, Django.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+<base target="_blank">
+</head>
+<body>
+  <!-- Animated Background -->
+  <div class="bg-animated" id="particles"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="nav-logo">JA.</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+      </ul>
+      <div class="visitor-badge" id="navCounter">
+        <span class="pulse"></span>
+        <span id="navCount">Loading...</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span>☁️</span>
+        <span>Available for Internship (SIWES 2026)</span>
+      </div>
+      <h1 class="hero-name">
+        <span class="gradient-text">James Ayomide</span><br>Adewara
+      </h1>
+      <p class="hero-title">Cloud Engineering Intern & Fullstack Developer</p>
+      <div class="hero-location">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span>Lagos, Nigeria · Open to Remote</span>
+      </div>
+      <div class="hero-cert">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22,4 12,14.01 9,11.01"/></svg>
+        <span>EF SET English Certificate — </span>
+        <a href="https://cert.efset.org/en/VvRzVX" target="_blank" rel="noopener">C1 Advanced (61/100)</a>
+      </div>
+      <p class="hero-bio">
+        I don't just build — I create impactful digital experiences and secure cloud infrastructure 
+        that turn businesses into lead-generating engines. Skilled in <strong>AWS, Ansible, Linux</strong> 
+        on the cloud side and <strong>React, Next.js, TypeScript, Tailwind CSS</strong> on the frontend, 
+        with <strong>FastAPI, Django</strong> powering the backend.
+      </p>
+      <div class="hero-cta">
+        <a href="mailto:jamesadewara1@gmail.com" class="btn btn-primary">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Get In Touch
+        </a>
+        <a href="https://github.com/jamesadewara" target="_blank" class="btn btn-secondary">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          View GitHub
+        </a>
+      </div>
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/james-adewara" target="_blank" class="social-link" title="LinkedIn">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://github.com/jamesadewara" target="_blank" class="social-link" title="GitHub">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://medium.com/@jamesadewara1" target="_blank" class="social-link" title="Medium">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+        </a>
+        <a href="mailto:jamesadewara1@gmail.com" class="social-link" title="Email">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" class="text-slate-500"><path d="M7 13l5 5 5-5M7 6l5 5 5-5"/></svg>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="section-header fade-in">
+      <span class="section-label">Expertise</span>
+      <h2 class="section-title">Skills & Technologies</h2>
+      <p class="section-desc">A blend of cloud infrastructure, backend engineering, and frontend craft — built through real projects and hands-on experience.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-card fade-in">
+        <div class="skill-card-header">
+          <div class="skill-icon cloud">☁️</div>
+          <h3 class="skill-card-title">Cloud Operations</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">AWS EC2</span>
+          <span class="skill-tag">S3</span>
+          <span class="skill-tag">VPC</span>
+          <span class="skill-tag">NAT Gateway</span>
+          <span class="skill-tag">IGW</span>
+          <span class="skill-tag">Subnets</span>
+          <span class="skill-tag">Route Tables</span>
+          <span class="skill-tag">Security Groups</span>
+          <span class="skill-tag">GCP</span>
+          <span class="skill-tag">Azure</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-header">
+          <div class="skill-icon security">🔒</div>
+          <h3 class="skill-card-title">Security & DevOps</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">SSL/TLS</span>
+          <span class="skill-tag">GPG Encryption</span>
+          <span class="skill-tag">SSH Protocols</span>
+          <span class="skill-tag">Secure ENV Variables</span>
+          <span class="skill-tag">CI/CD (GitHub Actions)</span>
+          <span class="skill-tag">Ansible</span>
+          <span class="skill-tag">IaC</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-header">
+          <div class="skill-icon backend">⚙️</div>
+          <h3 class="skill-card-title">Backend & Automation</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">FastAPI</span>
+          <span class="skill-tag">Django</span>
+          <span class="skill-tag">Python</span>
+          <span class="skill-tag">Bash</span>
+          <span class="skill-tag">Ansible Playbooks</span>
+          <span class="skill-tag">SQL</span>
+          <span class="skill-tag">NoSQL</span>
+          <span class="skill-tag">Redis</span>
+          <span class="skill-tag">Payload CMS</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-header">
+          <div class="skill-icon frontend">🎨</div>
+          <h3 class="skill-card-title">Frontend Development</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">React</span>
+          <span class="skill-tag">Next.js</span>
+          <span class="skill-tag">TypeScript</span>
+          <span class="skill-tag">Tailwind CSS</span>
+          <span class="skill-tag">HTML5</span>
+          <span class="skill-tag">SCSS</span>
+          <span class="skill-tag">GSAP</span>
+          <span class="skill-tag">Framer Motion</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-header">
+          <div class="skill-icon devops">🚀</div>
+          <h3 class="skill-card-title">Other</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Performance Optimization</span>
+          <span class="skill-tag">Analytics Integration</span>
+          <span class="skill-tag">API Integration</span>
+          <span class="skill-tag">Database Pooling</span>
+          <span class="skill-tag">Linux</span>
+          <span class="skill-tag">Git</span>
+        </div>
+      </div>
+      <div class="skill-card fade-in">
+        <div class="skill-card-header">
+          <div class="skill-icon leadership">👥</div>
+          <h3 class="skill-card-title">Leadership & Soft Skills</h3>
+        </div>
+        <div class="skill-tags">
+          <span class="skill-tag">Team Coordination</span>
+          <span class="skill-tag">Mentoring</span>
+          <span class="skill-tag">Project Leadership</span>
+          <span class="skill-tag">Problem-Solving</span>
+          <span class="skill-tag">English Communication</span>
+          <span class="skill-tag">UI/UX Design</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="section" id="experience">
+    <div class="section-header fade-in">
+      <span class="section-label">Career</span>
+      <h2 class="section-title">Professional Experience</h2>
+      <p class="section-desc">From building e-commerce platforms to leading mobile teams and deploying secure cloud infrastructure.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">Dec 2024 — Feb 2025</span>
+        <h3 class="timeline-role">Full-Stack Developer</h3>
+        <p class="timeline-company">Ventunna Bespoke Fashion Platform <span class="location">· UK (Remote)</span></p>
+        <ul class="timeline-desc">
+          <li>Developed a high-performance web application for a bespoke fashion brand using Next.js and FastAPI</li>
+          <li>Integrated Stripe for secure payment processing with end-to-end encryption</li>
+          <li>Implemented Payload CMS for seamless content management</li>
+          <li>Optimized application performance and reliability by implementing secure database connection pooling with Redis</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-pill">Next.js</span>
+          <span class="tech-pill">FastAPI</span>
+          <span class="tech-pill">Stripe</span>
+          <span class="tech-pill">Payload CMS</span>
+          <span class="tech-pill">Redis</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">Nov 2025</span>
+        <h3 class="timeline-role">Web Developer</h3>
+        <p class="timeline-company">Dwyzmax E-Commerce <span class="location">· University of Ilorin, Nigeria</span></p>
+        <ul class="timeline-desc">
+          <li>Engineered a digital store for electronics using a monolithic architecture with Django and Next.js</li>
+          <li>Designed and implemented core e-commerce logic including product catalogs and shopping cart functionality</li>
+          <li>Created a responsive, user-friendly interface to enhance the local shopping experience</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-pill">Django</span>
+          <span class="tech-pill">Next.js</span>
+          <span class="tech-pill">E-Commerce</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">Aug 2025 — Jan 2026</span>
+        <h3 class="timeline-role">Lead Web Developer</h3>
+        <p class="timeline-company">Edunovus Global <span class="location">· Remote (Volunteer)</span></p>
+        <ul class="timeline-desc">
+          <li>Built and deployed the official website (edunovusglobal.com) for an international education consultancy</li>
+          <li>Designed a responsive interface tailored to the needs of students and educational consultants</li>
+          <li>Integrated analytics for visitor tracking and optimized performance on low-resource servers</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">Next.js</span>
+          <span class="tech-pill">TypeScript</span>
+          <span class="tech-pill">Tailwind CSS</span>
+          <span class="tech-pill">SCSS</span>
+          <span class="tech-pill">Django</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">Aug 2025 — Sep 2025</span>
+        <h3 class="timeline-role">Lead Mobile Developer</h3>
+        <p class="timeline-company">Vyntra.ng <span class="location">· Remote (Volunteer)</span></p>
+        <ul class="timeline-desc">
+          <li>Managed cross-functional teams and assigned development tasks using GitHub to ensure adherence to best practices</li>
+          <li>Oversaw the mobile development lifecycle from meetings to development to deployment using GitHub CI/CD Actions</li>
+          <li>Mentored junior developers on technical implementation and collaborative version control workflows</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-pill">GitHub Actions</span>
+          <span class="tech-pill">CI/CD</span>
+          <span class="tech-pill">Team Leadership</span>
+          <span class="tech-pill">Mentoring</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">Dec 2025 — Jan 2026</span>
+        <h3 class="timeline-role">Lead UI/UX Designer</h3>
+        <p class="timeline-company">University of Ilorin GSE <span class="location">· Ilorin (Volunteer)</span></p>
+        <ul class="timeline-desc">
+          <li>Spearheaded the UI/UX design for the GSE project team</li>
+          <li>Conducted user research and created UI wireframes to improve the digital accessibility of educational resources</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-pill">UI/UX</span>
+          <span class="tech-pill">Wireframing</span>
+          <span class="tech-pill">User Research</span>
+        </div>
+      </div>
+
+      <div class="timeline-item fade-in">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">Nov 2023</span>
+        <h3 class="timeline-role">Coding Instructor</h3>
+        <p class="timeline-company">SureSuccess Institute</p>
+        <ul class="timeline-desc">
+          <li>Taught JavaScript, HTML, and CSS to students, guiding them through projects and practical exercises</li>
+          <li>Mentored peers and implemented best practices for efficient development</li>
+        </ul>
+        <div class="timeline-tech">
+          <span class="tech-pill">JavaScript</span>
+          <span class="tech-pill">HTML</span>
+          <span class="tech-pill">CSS</span>
+          <span class="tech-pill">Teaching</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section" id="projects">
+    <div class="section-header fade-in">
+      <span class="section-label">Portfolio</span>
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="section-desc">Hands-on projects spanning cloud security, backend systems, monitoring tools, and fullstack applications.</p>
+    </div>
+    <div class="projects-grid">
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <h3 class="project-title">AWS Secure Web Deployment</h3>
+          <div class="project-links">
+            <a href="https://github.com/jamesadewara" target="_blank" class="project-link" title="GitHub">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="project-desc">Designed and deployed a highly available, secure web application infrastructure on AWS. Configured a custom VPC with public/private subnets, NAT Gateways, and Internet Gateways for isolated traffic. Implemented Infrastructure as Code (IaC) using Ansible for reproducible and scalable environments.</p>
+        <div class="project-tech">
+          <span class="tech-pill">AWS</span>
+          <span class="tech-pill">VPC</span>
+          <span class="tech-pill">NAT Gateway</span>
+          <span class="tech-pill">Ansible</span>
+          <span class="tech-pill">IaC</span>
+          <span class="tech-pill">Load Balancing</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <h3 class="project-title">Remote Server Dashboard</h3>
+          <div class="project-links">
+            <a href="https://github.com/jamesadewara" target="_blank" class="project-link" title="GitHub">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="project-desc">Built a streamlined monitoring tool to track real-time CPU and RAM usage of remote Linux environments. Ensured secure data transmission by implementing encrypted connectivity via SSH Port 22. Developed the frontend using React and Next.js with a custom Node-SSH and Bash backend.</p>
+        <div class="project-tech">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">Next.js</span>
+          <span class="tech-pill">Node-SSH</span>
+          <span class="tech-pill">Bash</span>
+          <span class="tech-pill">Linux</span>
+          <span class="tech-pill">SSH</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <h3 class="project-title">GPG Security Test Framework</h3>
+          <div class="project-links">
+            <a href="https://github.com/jamesadewara" target="_blank" class="project-link" title="GitHub">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="project-desc">Developed a security testing framework to validate the implementation and strength of GPG encryption protocols. Conducted vulnerability assessments on digital signature workflows and data-at-rest encryption. Documented best practices for managing secure key pairs and preventing unauthorized data decryption.</p>
+        <div class="project-tech">
+          <span class="tech-pill">GPG</span>
+          <span class="tech-pill">FastAPI</span>
+          <span class="tech-pill">Security</span>
+          <span class="tech-pill">Encryption</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <h3 class="project-title">Spatial Design 3D</h3>
+          <div class="project-links">
+            <a href="#" class="project-link" title="Website">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="project-desc">An immersive 3D spatial design portfolio showcasing creative web experiences with interactive elements and smooth animations.</p>
+        <div class="project-tech">
+          <span class="tech-pill">3D</span>
+          <span class="tech-pill">WebGL</span>
+          <span class="tech-pill">Animation</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <h3 class="project-title">Paai Doc Previewer</h3>
+          <div class="project-links">
+            <a href="https://github.com/jamesadewara" target="_blank" class="project-link" title="GitHub">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="project-desc">A document previewer application for viewing and managing documents with a clean, responsive interface.</p>
+        <div class="project-tech">
+          <span class="tech-pill">React</span>
+          <span class="tech-pill">Document Processing</span>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-header">
+          <h3 class="project-title">Oluwamuyiwa Portfolio</h3>
+          <div class="project-links">
+            <a href="#" class="project-link" title="Website">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15,3 21,3 21,9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <p class="project-desc">A personalized portfolio website designed and developed for a client, focusing on high-performance hosting and responsive UI/UX.</p>
+        <div class="project-tech">
+          <span class="tech-pill">Portfolio</span>
+          <span class="tech-pill">Responsive Design</span>
+          <span class="tech-pill">Performance</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="section" id="education">
+    <div class="section-header fade-in">
+      <span class="section-label">Education</span>
+      <h2 class="section-title">Education & Training</h2>
+      <p class="section-desc">Currently pursuing a Computer Science degree while studying Cloud Engineering and Cybersecurity independently.</p>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card fade-in">
+        <h3 class="edu-school">University of Ilorin</h3>
+        <p class="edu-degree">Bachelor's Degree in Computer Science</p>
+        <p class="edu-date">Dec 2023 — Aug 2027</p>
+        <span class="edu-status">In Progress · Seeking SIWES 2026 Placement</span>
+      </div>
+      <div class="edu-card fade-in">
+        <h3 class="edu-school">AltSchool Africa</h3>
+        <p class="edu-degree">Cloud Engineering SOC (School of Engineering)</p>
+        <p class="edu-date">Dec 2023 — Aug 2027</p>
+        <span class="edu-status">Currently 2nd Semester</span>
+      </div>
+      <div class="edu-card fade-in">
+        <h3 class="edu-school">The Cyber Mentor</h3>
+        <p class="edu-degree">Cybersecurity Learner</p>
+        <p class="edu-date">Ongoing</p>
+        <span class="edu-status">Independent Study</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Visitor Counter Section -->
+  <section class="section">
+    <div class="visitor-section fade-in">
+      <div class="visitor-icon">👁️</div>
+      <h3 class="visitor-title">Live Visitor Counter</h3>
+      <p class="visitor-desc">Powered by FastAPI + Beanie + MongoDB — every visit tracked in real-time.</p>
+      <div id="visitorDisplay">
+        <div class="visitor-loading">
+          <div class="spinner"></div>
+          <span>Connecting to database...</span>
+        </div>
+      </div>
+      <p class="visitor-label">Total unique visitors</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p class="footer-text">
+      Built with <span class="footer-heart">❤</span> by James Adewara · 2026
+    </p>
+    <p class="footer-text" style="margin-top: 0.5rem; font-size: 0.8rem;">
+      +234 913 811 3769 · jamesadewara1@gmail.com
+    </p>
+  </footer>
+
+  <!-- ============================================
+       SCRIPTS
+       ============================================ -->
+  <script>
+    // ============================================
+    // PARTICLE BACKGROUND
+    // ============================================
+    (function() {
+      const container = document.getElementById('particles');
+      const particleCount = 25;
+      for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        const size = Math.random() * 4 + 2;
+        particle.style.width = size + 'px';
+        particle.style.height = size + 'px';
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.animationDuration = (Math.random() * 15 + 10) + 's';
+        particle.style.animationDelay = (Math.random() * 10) + 's';
+        container.appendChild(particle);
+      }
+    })();
+
+    // ============================================
+    // SCROLL REVEAL ANIMATION
+    // ============================================
+    (function() {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    })();
+
+    // ============================================
+    // NAV SCROLL EFFECT
+    // ============================================
+    (function() {
+      const nav = document.querySelector('.nav');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+          nav.style.background = 'rgba(15, 23, 42, 0.95)';
+          nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.3)';
+        } else {
+          nav.style.background = 'rgba(15, 23, 42, 0.85)';
+          nav.style.boxShadow = 'none';
+        }
+      });
+    })();
+  </script>
+
+  <!-- Visitor Counter — fetches from FastAPI backend -->
+  <script src="main.js"></script>
+</body>
+</html>
