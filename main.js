@@ -2,7 +2,7 @@
   'use strict';
 
   const CONFIG = {
-    API_BASE_URL: 'https://zqas8c44uh.execute-api.us-east-1.amazonaws.com/prod/api',
+    API_BASE_URL: 'https://z96esr7lvj.execute-api.us-east-1.amazonaws.com/prod/api',
     SESSION_KEY: 'ja_resume_visit_recorded_v1',
     ANIMATION_DURATION: 1500,
     MAX_RETRIES: 2,
