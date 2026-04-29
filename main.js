@@ -2,7 +2,7 @@
   'use strict';
 
   const CONFIG = {
-    API_BASE_URL: 'http://localhost:8000/api',
+    API_BASE_URL: 'https://zqas8c44uh.execute-api.us-east-1.amazonaws.com/prod/api',
     SESSION_KEY: 'ja_resume_visit_recorded_v1',
     ANIMATION_DURATION: 1500,
     MAX_RETRIES: 2,
@@ -25,9 +25,8 @@
 
   function showToast(message, type = 'error') {
     const toast = document.createElement('div');
-    toast.className = `fixed bottom-4 right-4 px-6 py-3 rounded-lg shadow-2xl transition-all duration-500 transform translate-y-10 opacity-0 z-50 flex items-center space-x-3 ${
-      type === 'error' ? 'bg-red-600 text-white' : 'bg-slate-800 text-white'
-    }`;
+    toast.className = `fixed bottom-4 right-4 px-6 py-3 rounded-lg shadow-2xl transition-all duration-500 transform translate-y-10 opacity-0 z-50 flex items-center space-x-3 ${type === 'error' ? 'bg-red-600 text-white' : 'bg-slate-800 text-white'
+      }`;
     toast.innerHTML = `<span>${type === 'error' ? '⚠️' : '✅'}</span><span class="font-medium">${message}</span>`;
     document.body.appendChild(toast);
     setTimeout(() => toast.classList.remove('translate-y-10', 'opacity-0'), 100);
@@ -81,10 +80,10 @@
 
     visits.forEach(visit => {
       const row = document.createElement('tr');
-      const date = new Date(visit.timestamp).toLocaleString([], { 
-        month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' 
+      const date = new Date(visit.timestamp).toLocaleString([], {
+        month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit'
       });
-      
+
       row.innerHTML = `
         <td class="whitespace-nowrap">${date}</td>
         <td><span class="ip-badge">${visit.ip || 'Unknown'}</span></td>
