@@ -1,6 +1,19 @@
 # 📄 Cloud Resume Challenge - Resume (Frontend)
 
+github repo: https://github.com/jamesadewara/cloud-resume-challenge-resume.git
+
 The frontend of the Cloud Resume Challenge, featuring a responsive, modern resume design.
+
+## 📐 Architecture
+
+```mermaid
+graph LR
+    User([User]) --> CF[Cloudflare]
+    CF -- HTTPS --> S3[AWS S3 Bucket]
+    User -- Fetch Visit Count --> APIG[API Gateway]
+    APIG --> Lambda[AWS Lambda]
+    Lambda --> MongoDB[(MongoDB Atlas)]
+```
 
 ## ✨ Features
 

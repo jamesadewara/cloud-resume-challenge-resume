@@ -17,8 +17,8 @@ permissions:
   contents: read
 
 env:
-  AWS_REGION: us-east-1
-  S3_BUCKET: resume.jamesadewara.com
+  AWS_REGION: ${{ vars.AWS_REGION }}
+  S3_BUCKET: ${{ vars.S3_BUCKET_NAME }}
 
 jobs:
   validate:
@@ -69,15 +69,6 @@ jobs:
             --exclude "terraform/*" \
             --cache-control "max-age=3600"
 
-      - name: Set content types
-        run: |
-          aws s3 cp s3://${{ env.S3_BUCKET }}/index.html s3://${{ env.S3_BUCKET }}/index.html \
-            --metadata-directive REPLACE --content-type "text/html"
-          aws s3 cp s3://${{ env.S3_BUCKET }}/styles.css s3://${{ env.S3_BUCKET }}/styles.css \
-            --metadata-directive REPLACE --content-type "text/css"
-          aws s3 cp s3://${{ env.S3_BUCKET }}/main.js s3://${{ env.S3_BUCKET }}/main.js \
-            --metadata-directive REPLACE --content-type "application/javascript"
-
       - name: Verify deployment
         run: |
-          echo "Website deployed to: https://${{ env.S3_BUCKET }}"
+          echo "Website deployed to: https://${{ vars.DOMAIN_NAME }}"
